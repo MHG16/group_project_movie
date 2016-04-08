@@ -1,6 +1,7 @@
-@import 'variables';
-
-body {
-  background: $light-grey;
-  background-image: url(../assets/orangecat.jpg);
+header{
+	.nav{
+		h1{
+			color:#bada55;
+		}
+	}
 }
