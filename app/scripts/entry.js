@@ -11,26 +11,24 @@ import MovieCollection from './collections/MovieCollection';
 
 let updatedMovieList = new MoviePageView();
 
-$('body').append(updatedMovieList.$el);
-
-
+$('body').html(updatedMovieList.$el);
 
 
 //get the latest movie information from the server when page loads  
-// var settings = {
-// 	success: function() {
-// 		movieCollection.forEach((todo) => {
-// 			console.log(todo.get('text'));
-// 			//instantiate each Todo Item View
-// 			let newPersonalTodoListView = new TodoItemView(
-// 				todo.get('text')
-// 			);
-// 			//append the 
-// 			$('.todo-list1').append(newPersonalTodoListView.el);
-// 		});
-// 	}
-// };
-// updatedMovieCollection.fetch(settings);
+var settings = {
+	success: function() {
+		movieCollection.forEach((movie) => {
+			console.log(movie.get('title'));
+			//instantiate each Todo Item View
+			// let newPersonalTodoListView = new TodoItemView(
+			// 	todo.get('text')
+			// );
+			// //append the 
+			// $('.todo-list1').append(newPersonalTodoListView.el);
+		});
+	}
+};
+updatedMovieCollection.fetch(settings);
 
 
 
