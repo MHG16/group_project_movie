@@ -9,7 +9,7 @@ import MoviePageView from './views/MoviePageView'
 
 //instantiate a movie view  
 
-let updatedMovieList = new MovieView();
+let updatedMovieList = new MoviePageView();
 
 $('body').append(updatedMovieList.$el);
 

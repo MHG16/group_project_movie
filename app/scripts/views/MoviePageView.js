@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 
 
-const MovieView = Backbone.View.extend ({
+const MoviePageView = Backbone.View.extend ({
 	tagName: 'section',  //section is the root element for the TodoListView
 	
 	initialize: function() {
