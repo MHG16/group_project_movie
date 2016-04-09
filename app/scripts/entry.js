@@ -9,15 +9,15 @@ import MovieCollection from './collections/MovieCollection';
 
 //instantiate a movie view  
 
-let updatedMovieList = new MoviePageView();
+let updatedMoviePage = new MoviePageView();
 
-$('body').html(updatedMovieList.$el);
+$('body').html(updatedMoviePage.$el);
 
 
 //get the latest movie information from the server when page loads  
 var settings = {
 	success: function() {
-		movieCollection.forEach((movie) => {
+		MovieCollection.forEach((movie) => {
 			console.log(movie.get('title'));
 			//instantiate each Todo Item View
 			// let newPersonalTodoListView = new TodoItemView(
@@ -28,7 +28,7 @@ var settings = {
 		});
 	}
 };
-updatedMovieCollection.fetch(settings);
+MovieCollection.fetch(settings);
 
 
 
