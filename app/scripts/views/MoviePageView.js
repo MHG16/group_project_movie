@@ -4,18 +4,29 @@ import Backbone from 'backbone';
 
 const MoviePageView = Backbone.View.extend ({
 	tagName: 'section',  //section is the root element 
-	
-	initialize: function(movie) {
-		this.title = movie;  
+	// events: {
+	// 	'click .vote': 'addVote' 
+
+	initialize: function(title) {
+		console.log('initialize');
+		this.title = title;  
 		this.render();
 	},
 	render: function() {  //code to put the elements needed into the root element
+		console.log('render');
 		const template = `
-		<div class="movielist"></div>`; 
+		<div>${this.title}</div>`; 
 
-		this.$el.html(this.title);  //html here replaces anything in the section with the template.
+		this.$el.html(this.title);  
 		this.$el.html(template);
 	}
+
+	// function: addVote(e) {
+
+
+
+	// }
+
 	
 });
 

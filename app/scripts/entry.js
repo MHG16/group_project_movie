@@ -5,10 +5,10 @@ import $ from 'jquery';
 import Backbone from 'backbone'
 
 import MoviePageView from './views/MoviePageView'
-import MovieCollection from './collections/MovieCollection';
+import movies from './collections/MovieCollection';
 
 
-let updatedMoviePage = new MoviePageView();
+let updatedMoviePage = new MoviePageView('hello');
 
 $('body').html(updatedMoviePage.$el);
 
@@ -16,14 +16,14 @@ $('body').html(updatedMoviePage.$el);
 //get the latest movie information from the server when page loads  
 var settings = {
 	success: function() {
-		MovieCollection.forEach((movie) => {
+		movies.forEach((movie) => {
 			console.log(movie.get('title'));
-			let updatedMoviePage = new MoviePageView(movie.get('title'));
-			$('.movielist').append(updatedMoviePage.el);
+		//now use backbone sort function that takes a function and the number of votes
+		//then use backbone at to get the 0 through 4 elements in the array.  
 		});
 	}
 };
-MovieCollection.fetch(settings);
+movies.fetch(settings);
 
 
 
