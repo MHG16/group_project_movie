@@ -7,7 +7,6 @@ import Backbone from 'backbone'
 import MoviePageView from './views/MoviePageView'
 import MovieCollection from './collections/MovieCollection';
 
-//instantiate a movie view  
 
 let updatedMoviePage = new MoviePageView();
 
@@ -19,12 +18,8 @@ var settings = {
 	success: function() {
 		MovieCollection.forEach((movie) => {
 			console.log(movie.get('title'));
-			//instantiate each Todo Item View
-			// let newPersonalTodoListView = new TodoItemView(
-			// 	todo.get('text')
-			// );
-			// //append the 
-			// $('.todo-list1').append(newPersonalTodoListView.el);
+			let updatedMoviePage = new MoviePageView(movie.get('title'));
+			$('.movielist').append(updatedMoviePage.el);
 		});
 	}
 };
