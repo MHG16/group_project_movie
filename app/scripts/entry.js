@@ -5,7 +5,7 @@ import $ from 'jquery';
 import Backbone from 'backbone'
 
 import MoviePageView from './views/MoviePageView'
-
+import MovieCollection from './collections/MovieCollection';
 
 //instantiate a movie view  
 
