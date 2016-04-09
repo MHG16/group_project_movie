@@ -8,7 +8,7 @@ import MoviePageView from './views/MoviePageView'
 import movies from './collections/MovieCollection';
 
 
-let updatedMoviePage = new MoviePageView('hello');
+let updatedMoviePage = new MoviePageView();
 
 $('body').html(updatedMoviePage.$el);
 
@@ -18,8 +18,9 @@ var settings = {
 	success: function() {
 		movies.forEach((movie) => {
 			console.log(movie.get('title'));
-		//now use backbone sort function that takes a function and the number of votes
-		//then use backbone at to get the 0 through 4 elements in the array.  
+			$('.title').append(movie.get('title'));
+		//now use backbone sort function that takes a function(the comparitor) and the number of votes
+		//then use backbone at to get the 0 through 3 elements in the array.  
 		});
 	}
 };
