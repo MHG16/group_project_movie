@@ -4,28 +4,12 @@ import './../styles/main.scss';
 import $ from 'jquery';
 import Backbone from 'backbone'
 
+import MoviePageView from './views/MoviePageView'
 
-const MovieView = Backbone.View.extend ({
-	tagName: 'section',  //section is the root element for the TodoListView
-	
-	initialize: function() {
-		this.render();
-	},
-	render: function() {  //code to put the elements needed into the root element
-		const template = `
-		<p>Hello World</p>`; 
-
-		this.$el.html(template);  //html here replaces anything in the section with the template.
-
-	}
-	
-});
 
 //instantiate a movie view  
 
 let updatedMovieList = new MovieView();
-
-// let personalTodoListCollection = new TodoItemCollection();
 
 $('body').append(updatedMovieList.$el);
 
