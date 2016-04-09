@@ -5,14 +5,6 @@ import $ from 'jquery';
 import Backbone from 'backbone'
 
 
-//instantiate a movie view  
-
-let updatedMovieList = new MovieView();
-
-// let personalTodoListCollection = new TodoItemCollection();
-
-$('body').append(updatedMovieList.$el);
-
 const MovieView = Backbone.View.extend ({
 	tagName: 'section',  //section is the root element for the TodoListView
 	
@@ -29,7 +21,13 @@ const MovieView = Backbone.View.extend ({
 	
 });
 
+//instantiate a movie view  
 
+let updatedMovieList = new MovieView();
+
+// let personalTodoListCollection = new TodoItemCollection();
+
+$('body').append(updatedMovieList.$el);
 
 
 
