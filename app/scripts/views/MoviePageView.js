@@ -24,9 +24,10 @@ const MoviePageView = Backbone.View.extend ({
 							<p>"${this.title}"</p>
 							<p>Release Date</p>
 						<div class="vote_button">
-							<p>"${this.vote}"</p>
+							<p>"${this.get('upvotes_count')}"</p>
 						</div>
 		</div>`; 
+
 
 		//this.$el.html(this.title);  
 		this.$el.html(template);
