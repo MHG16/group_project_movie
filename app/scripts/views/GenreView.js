@@ -1,5 +1,10 @@
-import $ from 'jquery';
-import Backbone from 'backbone';
+// import $ from 'jquery';
+// import Backbone from 'backbone';
+
+
+//view for movies in four genres
+
+// const GenreView = Backbone.View.extend ({
 
 
 
@@ -7,8 +12,7 @@ import Backbone from 'backbone';
 
 
 
+// });
 
 
-
-
-export default GenreView;
+// export default GenreView;

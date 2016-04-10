@@ -23,7 +23,14 @@ const MoviePageView = Backbone.View.extend ({
 	}
 
 	// function: addVote(e) {
-
+		// $(".input-form" ).submit( (e) => {
+  //       e.preventDefault();
+  //       let title = $(".movieTitle").val();
+  //       let genre = $('.movieGenre').val();
+  //       let upvotes_count = $('.movieVotes').val();
+  //       let pic = $('.moviePic').val();
+  //       $.post( "https://group-project-movie-tiy.herokuapp.com/api/movies", 
+  //          {post: {title: title , genre: genre, upvotes_count: count, pic: pic} });
 
 
 	// }

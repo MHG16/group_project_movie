@@ -1,5 +1,9 @@
-import $ from 'jquery';
-import Backbone from 'backbone';
+// import $ from 'jquery';
+// import Backbone from 'backbone';
+
+//view for top four highest rated movies
+
+// const TopFourView = Backbone.View.extend ({
 
 
 
@@ -7,9 +11,7 @@ import Backbone from 'backbone';
 
 
 
+// });
 
 
-
-
-
-export default TopFourView;
+// export default TopFourView;
