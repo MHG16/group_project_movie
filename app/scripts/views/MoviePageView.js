@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-
+import MovieCollection from '../collections/MovieCollection';
 
 const MoviePageView = Backbone.View.extend ({
 	tagName: 'section',  //section is the root element 
