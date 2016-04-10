@@ -23,12 +23,14 @@ const MoviePageView = Backbone.View.extend ({
 							<p>${this.title}</p>
 							<p>  </p>
 						<div class="vote_button">
+
 							<p>Vote</p>
 						</div>
 					</div> `
 	},
 	render: function() {  
 		this.$el.html(this.template());
+
 	}
 
 	// function: addVote(e) {
