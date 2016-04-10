@@ -2,35 +2,41 @@
 import '../styles/main.scss';
 
 import $ from 'jquery';
-import Backbone from 'backbone'
+import Backbone from 'backbone';
 
-import MoviePageView from './views/MoviePageView'
-
-
-//instantiate a movie view  
-
-let updatedMovieList = new MoviePageView();
-
-$('body').append(updatedMovieList.$el);
+import MoviePageView from './views/MoviePageView';
+import movies from './collections/MovieCollection';
 
 
+const updatedMoviePage = new MoviePageView();
+
+$('body').html(updatedMoviePage.$el);
 
 
 //get the latest movie information from the server when page loads  
-// var settings = {
-// 	success: function() {
-// 		movieCollection.forEach((todo) => {
-// 			console.log(todo.get('text'));
-// 			//instantiate each Todo Item View
-// 			let newPersonalTodoListView = new TodoItemView(
-// 				todo.get('text')
-// 			);
-// 			//append the 
-// 			$('.todo-list1').append(newPersonalTodoListView.el);
-// 		});
-// 	}
-// };
-// updatedMovieCollection.fetch(settings);
+const settings = {
+	success: function() {
+		console.log(movies);
+		// settings.each((movies) => {
+		// 	console.log(movies.get('title'));
+		// };
+
+
+		// //loop through the top four items in the array and display their titles
+		// for (var i = 0; i < movies.length; i++) {
+		// 	console.log(movies[i]);
+		// 	};
+		// };
+
+
+		
+
+
+ }
+
+};
+
+movies.fetch(settings);
 
 
 
