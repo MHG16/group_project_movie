@@ -18,7 +18,7 @@ var settings = {
 
 			console.log(movie.get('title'));
 			let newMoviePageView = new MoviePageView(movie.get('title'));
-			$('body').html(newMoviePageView.el);
+			$('body').append(newMoviePageView.el);
  		});
 		
 	}
