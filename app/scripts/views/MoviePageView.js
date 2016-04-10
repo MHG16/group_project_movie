@@ -7,16 +7,26 @@ const MoviePageView = Backbone.View.extend ({
 	// events: {
 	// 	'click .vote': 'addVote' 
 
-	initialize: function(title) {
-		console.log('initialize');
+	initialize: function(title, genre, upvotes_count) {
+		//console.log('initialize');
 		this.title = title;  
+		this.genre = genre; 
+		this.vote = upvotes_count;
 		this.render();
 	},
 	render: function() {  //code to put the elements needed into the root element
-		console.log('render');
+		//console.log('render');
 		const template = `
-		<p>${this.title}</p>
-		`; 
+		<div class="movie_best">
+						<div class="poster">
+							<a href="http://www.imdb.com/title/tt3774802/?ref_=nv_sr_1"><img src="http://www.flickeringmyth.com/wp-content/uploads/2016/02/Pandemic-2016-Movie-Poster-600x889.jpg"></a>
+						</div>
+							<p>"${this.title}"</p>
+							<p>Release Date</p>
+						<div class="vote_button">
+							<p>"${this.vote}"</p>
+						</div>
+		</div>`; 
 
 		//this.$el.html(this.title);  
 		this.$el.html(template);
