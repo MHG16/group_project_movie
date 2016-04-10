@@ -7,7 +7,8 @@ const MovieModel = Backbone.Model.extend({
 	idAttribute: 'id',
 	title: 'title',
 	genre: 'genre', 
-	upvotes_count: 'upvotes_count'
+	upvotes_count: 'upvotes_count',
+	url: 'url'
 });
 
 
