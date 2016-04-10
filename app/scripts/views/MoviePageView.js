@@ -17,7 +17,10 @@ const MoviePageView = Backbone.View.extend ({
 	render: function() {  
 	
 		const template = `
+		<div class="row">
+			<div class="col col-12">
 		<div class="best_of">
+			<h2>Highest Ranked</h2>
 		<div class="movie_best">
 						<div class="poster">
 							<a href="http://www.imdb.com/title/tt3774802/?ref_=nv_sr_1"><img src="http://www.flickeringmyth.com/wp-content/uploads/2016/02/Pandemic-2016-Movie-Poster-600x889.jpg"></a>
@@ -61,8 +64,9 @@ const MoviePageView = Backbone.View.extend ({
 						<p>"${this.vote}"</p>
 					</div>
 		</div>
+		</div>
+		</div>
 		</div>`;
-
 
 		this.$el.html(template);
 	}
