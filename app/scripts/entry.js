@@ -8,34 +8,28 @@ import MoviePageView from './views/MoviePageView';
 import movies from './collections/MovieCollection';
 
 
-const updatedMoviePage = new MoviePageView();
+//const updatedMoviePage = new MoviePageView();
 
-$('body').html(updatedMoviePage.$el);
+//$('body').html(updatedMoviePage.$el);
 
 
 //get the latest movie information from the server when page loads  
+//for now just show the top four movies with most votes
 const settings = {
 	success: function() {
 		console.log(movies);
-		// settings.each((movies) => {
-		// 	console.log(movies.get('title'));
-		// };
+
+		movies.forEach((movie) => {
+			console.log(movie.get('title'));
+			const updatedMoviePage  = new MoviePageView(movie.get('title'));
+
+			$('body').html(updatedMoviePage.$el);
 
 
-		// //loop through the top four items in the array and display their titles
-		// for (var i = 0; i < movies.length; i++) {
-		// 	console.log(movies[i]);
-		// 	};
-		// };
+ 		});
 
-
-		
-
-
- }
-
+	}
 };
-
 movies.fetch(settings);
 
 
