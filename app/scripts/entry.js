@@ -10,20 +10,21 @@ import movies from './collections/MovieCollection';
 
 //const updatedMoviePage = new MoviePageView();
 
-//$('body').html(updatedMoviePage.$el);
+//$('body').append(MoviePageView.$el);
 
 
 //get the latest movie information from the server when page loads  
 //for now just show the top four movies with most votes
+
 const settings = {
 	success: function() {
 		console.log(movies);
 
 		movies.forEach((movie) => {
 			console.log(movie.get('title'));
-			const updatedMoviePage  = new MoviePageView(movie.get('title'));
+			let updatedMoviePage  = new MoviePageView(movie.get('title'));
 
-			$('body').html(updatedMoviePage.$el);
+			$('body').html(updatedMoviePage.el);
 
 
  		});

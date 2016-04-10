@@ -15,9 +15,10 @@ const MoviePageView = Backbone.View.extend ({
 	render: function() {  //code to put the elements needed into the root element
 		console.log('render');
 		const template = `
-		<div class ="title">${this.title}</div>`; 
+		<p>${this.title}</p>
+		`; 
 
-		this.$el.html(this.title);  
+		//this.$el.html(this.title);  
 		this.$el.html(template);
 	}
 
