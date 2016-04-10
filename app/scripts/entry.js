@@ -10,17 +10,18 @@ import MovieCollection from './collections/MovieCollection';
 let movies = MovieCollection;
 
 
+
 var settings = {
 	success: function() {
-		//console.log(movies);
+		
 
 		movies.forEach((movie) => {
 
-			console.log(movie.get('title'));
-			let newMoviePageView = new MoviePageView(movie.get('title'));
+			//console.log(movie.get('title'));
+			let newMoviePageView = new MoviePageView(movie.get('title'), movie.get('genre'), movie.get('upvotes_count'));
 			$('body').append(newMoviePageView.el);
  		});
-		
+
 	}
 };
 
