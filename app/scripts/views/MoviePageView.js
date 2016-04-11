@@ -3,9 +3,11 @@ import Backbone from 'backbone';
 import MovieCollection from '../collections/MovieCollection';
 
 const MoviePageView = Backbone.View.extend({
- //section is the root element 
+ 
 	// events: {
-	// 	'click .vote': 'addVote' 
+	//  	'click .vote': 'addVote' 
+	//  },
+
 	className: 'col col-12',
 	initialize: function(title, genre, upvotes_count, url, a) {
 	
@@ -35,12 +37,16 @@ const MoviePageView = Backbone.View.extend({
 		this.$el.html(this.template());
 		console.log('this is rendering.')
 
-	}
+	},
 
-	// function: addVote(e) {
-		//need to increase the vote count by one 
-		//let this.vote = this.vote++;
+	//function here for click event handler on 'vote buttons, need to add one to vote when clicked
+	//also, should push to server when clicked.  
+	// addVote: function(e) {
+		
+	// 	let this.vote = this.vote++;
 
+	// 	return this.vote;
+	// }
 		//then push the changes to server
 		// $(".input-form" ).submit( (e) => {
   //       e.preventDefault();
