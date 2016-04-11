@@ -8,7 +8,7 @@ const MoviePageView = Backbone.View.extend({
 	//  	'click .vote': 'addVote' 
 	//  },
 
-	className: 'col col-12',
+	className: 'movie',
 	initialize: function(title, genre, upvotes_count, url, a) {
 	
 		this.title = title;  
@@ -20,17 +20,14 @@ const MoviePageView = Backbone.View.extend({
 	},
 	template: function () {
 		return `
-			<div class ="best_of">
-			<div class="movie_best">
 				<div class="poster">
+					<p>${this.genre}</p>
 					<a href="${this.a}"><img src="${this.url}"></a>
-					</div>
+				</div>
 					<p>${this.title}</p>
 						<div class="vote_button">
-							<p>${this.vote}</p>
+							<p>Vote</p>
 						</div>
-					</div>
-			</div>
 				`
 	},
 	render: function() {  

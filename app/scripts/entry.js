@@ -15,7 +15,7 @@ var settings = {
 		
 		MovieCollection.forEach((movie) => {
 			let newMoviePageView = new MoviePageView(movie.get('title'), movie.get('genre'), movie.get('upvotes_count'), movie.get('url'));
-			$('.stuff').append(newMoviePageView.el);
+			$('.row').append(newMoviePageView.el);
  		});	
 	
 	}
