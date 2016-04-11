@@ -2,34 +2,38 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 import MovieCollection from '../collections/MovieCollection';
 
-const MoviePageView = Backbone.View.extend ({
-	tagName: 'section',  //section is the root element 
+const MoviePageView = Backbone.View.extend({
+ //section is the root element 
 	// events: {
 	// 	'click .vote': 'addVote' 
-
-	initialize: function(title, genre, upvotes_count, url) {
+	className: 'col col-12',
+	initialize: function(title, genre, upvotes_count, url, a) {
 	
 		this.title = title;  
 		this.genre = genre; 
 		this.vote = upvotes_count;
 		this.url = url; 
+		this.a = a;
 		this.render();
 	},
 	template: function () {
-		return `<div class="movie_best">
-						<div class="poster">
-							<a href="${this.url}"><img src=""></a>
-						</div>
-							<p>${this.title}</p>
-							<p>  </p>
+		return `
+			<div class ="best_of">
+			<div class="movie_best">
+				<div class="poster">
+					<a href="${this.a}"><img src="${this.url}"></a>
+					</div>
+					<p>${this.title}</p>
 						<div class="vote_button">
-
-							<p>Vote</p>
+							<p>${this.vote}</p>
 						</div>
-					</div> `
+					</div>
+			</div>
+				`
 	},
 	render: function() {  
 		this.$el.html(this.template());
+		console.log('this is rendering.')
 
 	}
 
