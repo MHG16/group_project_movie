@@ -3,7 +3,7 @@ import Backbone from 'backbone';
 import MovieCollection from '../collections/MovieCollection';
 
 const MoviePageView = Backbone.View.extend({
- 
+ 	//want an event here for user clicking on the vote button 
 	// events: {
 	//  	'click .vote': 'addVote' 
 	//  },
@@ -43,7 +43,7 @@ const MoviePageView = Backbone.View.extend({
 	//also, should push to server when clicked.  
 	// addVote: function(e) {
 		
-	// 	let this.vote = this.vote++;
+	// 	this.vote++;  
 
 	// 	return this.vote;
 	// }
@@ -56,7 +56,7 @@ const MoviePageView = Backbone.View.extend({
   //       let pic = $('.moviePic').val();
   //       $.post( "https://group-project-movie-tiy.herokuapp.com/api/movies", 
   //          {post: {title: title , genre: genre, upvotes_count: count, pic: pic} });
-
+  //		return this.vote;
 
 	// }
 
