@@ -12,16 +12,14 @@ let movies = MovieCollection;
 
 var settings = {
 	success: function() {
-		//console.log(movies);
-
-		movies.forEach((movie) => {
-
-			console.log(movie.get('title'));
-			let newMoviePageView = new MoviePageView(movie.get('title'));
-			$('body').append(newMoviePageView.el);
- 		});
 		
+		MovieCollection.forEach((movie) => {
+			let newMoviePageView = new MoviePageView(movie.get('title'), movie.get('genre'), movie.get('upvotes_count'), movie.get('url'));
+			$('.row').append(newMoviePageView.el);
+ 		});	
+	
 	}
+
 };
 
 movies.fetch(settings);
