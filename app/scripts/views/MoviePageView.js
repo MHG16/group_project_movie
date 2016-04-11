@@ -2,38 +2,49 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 import MovieCollection from '../collections/MovieCollection';
 
-const MoviePageView = Backbone.View.extend ({
-	tagName: 'section',  //section is the root element 
+const MoviePageView = Backbone.View.extend({
+ 	//want an event here for user clicking on the vote button 
 	// events: {
-	// 	'click .vote': 'addVote' 
+	//  	'click .vote': 'addVote' 
+	//  },
 
-	initialize: function(title, genre, upvotes_count) {
-		//console.log('initialize');
+	className: 'movie',
+	initialize: function(title, genre, upvotes_count, url, a) {
+	
 		this.title = title;  
 		this.genre = genre; 
 		this.vote = upvotes_count;
+		this.url = url; 
+		this.a = a;
 		this.render();
 	},
-	render: function() {  //code to put the elements needed into the root element
-		//console.log('render');
-		const template = `
-		<div class="movie_best">
-						<div class="poster">
-							<a href="http://www.imdb.com/title/tt3774802/?ref_=nv_sr_1"><img src="http://www.flickeringmyth.com/wp-content/uploads/2016/02/Pandemic-2016-Movie-Poster-600x889.jpg"></a>
-						</div>
-							<p>"${this.title}"</p>
-							<p>Release Date</p>
+	template: function () {
+		return `
+				<div class="poster">
+					<p>${this.genre}</p>
+					<a href="${this.a}"><img src="${this.url}"></a>
+				</div>
+					<p>${this.title}</p>
 						<div class="vote_button">
-							<p>"${this.get('upvotes_count')}"</p>
+							<p>Vote</p>
 						</div>
-		</div>`; 
+				`
+	},
+	render: function() {  
+		this.$el.html(this.template());
+		console.log('this is rendering.')
 
+	},
 
-		//this.$el.html(this.title);  
-		this.$el.html(template);
-	}
+	//function here for click event handler on 'vote buttons, need to add one to vote when clicked
+	//also, should push to server when clicked.  
+	// addVote: function(e) {
+		
+	// 	this.vote++;  
 
-	// function: addVote(e) {
+	// 	return this.vote;
+	// }
+		//then push the changes to server
 		// $(".input-form" ).submit( (e) => {
   //       e.preventDefault();
   //       let title = $(".movieTitle").val();
@@ -42,7 +53,7 @@ const MoviePageView = Backbone.View.extend ({
   //       let pic = $('.moviePic').val();
   //       $.post( "https://group-project-movie-tiy.herokuapp.com/api/movies", 
   //          {post: {title: title , genre: genre, upvotes_count: count, pic: pic} });
-
+  //		return this.vote;
 
 	// }
 
