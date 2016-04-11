@@ -8,6 +8,23 @@ $button_border:#292828;
 $header_font:'Monoton', cursive;
 $body_font: 'Ubuntu', sans-serif;
 
+// @mixin centerer {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// @mixin h-center {
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%)
+
+// @mixin v-center {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
 
 //-----------------------------------header/navbar styling-------------------------------//
 header{
@@ -30,80 +47,18 @@ header{
 
 }
 
+footer{
+	background-color:$main_theme;
+	padding:3em;
+	margin:0 auto;
+}
 
-//---------------------------------------------------BEST OF SECTION------------------------------//
 
 
-.best_of{
-	box-sizing:border-box;
-	overflow:auto;
-	margin-bottom: 2em;
+//------------------------------------------MOBILE------------------------------
+
+.row{
 	
-
-
-	h2{
-		font-family: $body_font;
-		margin:1em;
-	}
-
-	.movie_best{
-		margin: 1%;
-		display: inline-block;
-		width:45%;
-		text-align:center;
-		overflow: hidden;
-		margin-bottom: 2em;
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			cursor:pointer;
-			}
-		}
-
-	}//--end of movie_best tag
-}//--end of best_of Tag
-
-
-//------------------------------------------Action & Adventure Section------------------------------
-
-.action_adventure{
-	background-color:$body_background2;
 	overflow:auto;
 	margin: 0 auto;
 	margin-bottom: 2em;
@@ -113,7 +68,7 @@ header{
 		font-family: $body_font;
 		margin:1em;
 	}
-	.movie_action{
+	.movie{
 		margin: 1%;
 		display: inline-block;
 		width:45%;
@@ -156,7 +111,7 @@ header{
 				padding-bottom:0.7em;
 				padding-left:2em;
 				padding-right: 2em;
-				border:3px solid $body_background2;
+				border:3px solid $body_background1;
 
 			}
 			p:hover{
@@ -166,211 +121,12 @@ header{
 		}
 
 
-	}//end of movie_action tag--//
+	}//end of movie tag--//
 
 
-}//--end of action_adventure tag--//
 
 
-//---------------------------------------------COMEDY SECTION----------------------------------------//
-
-
-.comedy{
-	overflow:hidden;
-	margin-bottom: 2em;
-	h2{
-		font-family: $body_font;
-		margin:1em;
-	}
-	.movie_comedy{
-		margin: 1%;
-		display: inline-block;
-		width:45%;
-		text-align:center;
-		margin-bottom: 2em;
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			cursor:pointer;
-			}
-		}
-
-	}//--end of movie_comedy tag--//
-
-
-}//--end of comedy tag--//
-
-//-----------------------------------------------SCI FI SECTION--------------------------------------//
-.scifi{
-	background-color:$body_background2;
-	overflow:hidden;
-	margin-bottom: 2em;
-
-	h2{
-		font-family: $body_font;
-		margin:1em;
-	}
-	.movie_scifi{
-		margin: 1%;
-		display: inline-block;
-		width:45%;
-		text-align:center;
-		margin-bottom: 2em;
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $body_background2;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			cursor:pointer;
-			}
-		}
-
-	}//--end of movie_scifi tag--//
-
-}//--end of scifi tag--//
-
-//---------------------------------------------FAMILY SECTION------------------------------------------//
-
-
-.family{
-	overflow:hidden;
-	margin-bottom: 2em;
-
-	h2{
-		font-family: $body_font;
-		margin:1em;
-	}
-	.movie_family{
-		margin: 1%;
-		display: inline-block;
-		width:45%;
-		text-align:center;
-		margin-bottom: 2em;
-		
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			cursor:pointer;
-			}
-		}
-	}//--end of movie_family tag--//
-
-}//--end of family tag--//
-
-footer{
-	background-color:$main_theme;
-	padding:3em;
-	margin:0;
-
-}
-
+}//--end or row--//
 
 
 
@@ -381,9 +137,9 @@ footer{
 
 @media (min-width: 750px){
 
-//---------------------------------------------------BEST OF SECTION BREAKPOINT 1------------------------------//
 
-	.best_of{
+
+	.row{
 	overflow:hidden;
 	box-sizing:border-box;
 	
@@ -394,10 +150,10 @@ footer{
 		margin:1em;
 	}
 
-	.movie_best{
+	.movie{
 		margin: 1%;
-		display: inline-block;
-		width:22%;
+		float:left;
+		width: 30%;
 		text-align:center;
 		overflow: hidden;
 	
@@ -425,134 +181,7 @@ footer{
 		}
 
 		.vote_button{
-
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			
-			}
-		}
-
-	}//--end of movie_best tag
-}//--end of best_of Tag
-
-
-
-
-
-
-//------------------------------------------Action & Adventure Section BREAKPOINT 1------------------------------
-
-
-
-.action_adventure{
-	background-color:$body_background2;
-	overflow:hidden;
-	.movie_action{
-		margin: 0 auto;
-		float:left;
-		width:33%;
-		text-align:center;
-		margin-bottom: 2em;
-
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $body_background2;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			
-			}
-		}
-
-
-	}//end of movie_action tag--//
-
-
-}//--end of action_adventure tag--//
-
-//---------------------------------------------COMEDY SECTION BREAKPOINT 1----------------------------------------//
-
-
-.comedy{
-	overflow:hidden;
-	.movie_comedy{
-		margin: 0 auto;
-		float:left;
-		width:33%;
-		text-align:center;
-		margin-bottom: 2em;
-
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
+			width: 65%;
 			
 
 			p{
@@ -572,133 +201,98 @@ footer{
 			}
 		}
 
-	}//--end of movie_comedy tag--//
+	}//END OF MOVIE
 
-
-}//--end of comedy tag--//
-
-//-----------------------------------------------SCI FI SECTION BREAKPOINT--------------------------------------//
-.scifi{
-	background-color:$body_background2;
-	overflow:hidden;
-	.movie_scifi{
-		margin: 0 auto;
-		float:left;
-		width:33%;
+	
+}
+.row{
+	div:first-of-type{
+		margin: 2%;
+		display: inline-block;
+		width:20%;
 		text-align:center;
 		margin-bottom: 2em;
+
+	.vote_button{
+			
+			width: 65%;
+
+			
+
+			
+		}
+
 		
 
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $body_background2;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			}
-		}
-
-	}//--end of movie_scifi tag--//
-
-}//--end of scifi tag--//
-
-//---------------------------------------------FAMILY SECTION BREAKPOINT 1------------------------------------------//
-
-
-.family{
-	overflow:hidden;
-	.movie_family{
-		margin: 0 auto;
-		float:left;
-		width:33%;
+					
+	}//END OR DIV OR TYPE
+}//END OF ROW
+.row{
+	div:nth-of-type(2){
+		margin: 2%;
+		display: inline-block;
+		width:20%;
 		text-align:center;
 		margin-bottom: 2em;
-		
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:18.750em;
-								width: 12.500em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			line-height: 0.5em;
-			
-			margin:1em;
-		}
-
 		.vote_button{
 			
-			
+			width: 65%;
+
 			
 
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			}
+			
 		}
-	}//--end of movie_family tag--//
+		
 
-}//--end of family tag--//
+					
+	}//END OR DIV OR TYPE
+}//END OF ROW
+
+.row{
+	div:nth-of-type(3){
+		margin: 2%;
+		display: inline-block;
+		width:20%;
+		text-align:center;
+		margin-bottom: 2em;
+		.vote_button{
+			
+			width: 65%;
+
+			
+
+			
+		}
+		
+
+					
+	}//END OR DIV OR TYPE
+}//END OF ROW
+
+.row{
+	div:nth-of-type(4){
+		margin: 2%;
+		display: inline-block;
+		width:20%;
+		text-align:center;
+		margin-bottom: 2em;
+		.vote_button{
+			
+			width: 65%;
+
+			
+
+			
+		}
+		
+
+					
+	}//END OR DIV OR TYPE
+}//END OF ROW
 
 
 
-
-}//--END OF MEDIA QUIRY TAG BREAKPOINT 1--//
-
-
-
-
+}
 
 
 
@@ -708,26 +302,31 @@ footer{
 
 @media (min-width: 1100px){
 
-//------------------------------------------Action & Adventure Section BREAKPOINT 2------------------------------
 
 
 
-.action_adventure{
-	background-color:$body_background2;
+
+
+//--------------------------------------------- BREAKPOINT 2----------------------------------------//
+
+
+.row{
 	overflow:hidden;
-	.movie_action{
+	.movie{
 		margin:0 auto;
 		float:left;
 		width:16%;
 		text-align:center;
 		height: 428px;
 		box-sizing:border-box;
+		margin-bottom: 5em;
 
 		
 
 					.poster{
    						position:relative;
    						margin:0 auto;
+   						
 						a{
 							img{
 								height:15.750em;
@@ -744,67 +343,7 @@ footer{
 		}
 
 		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $body_background2;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			}
-		}
-
-
-	}//end of movie_action tag--//
-
-
-}//--end of action_adventure tag--//
-
-//---------------------------------------------COMEDY SECTION BREAKPOINT 2----------------------------------------//
-
-
-.comedy{
-	overflow:hidden;
-	.movie_comedy{
-		margin:0 auto;
-		float:left;
-		width:16%;
-		text-align:center;
-		height: 428px;
-		box-sizing:border-box;
-
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:15.750em;
-								width: 10.00em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			
-		}
-
-		.vote_button{
-			
+			margin-top: 0em;
 			
 			
 
@@ -824,125 +363,10 @@ footer{
 			}
 		}
 
-	}//--end of movie_comedy tag--//
+	}//--end of movie tag--//
 
 
-}//--end of comedy tag--//
-
-
-//-----------------------------------------------SCI FI SECTION BREAKPOINT 2--------------------------------------//
-.scifi{
-	background-color:$body_background2;
-	overflow:hidden;
-	.movie_scifi{
-		margin:0 auto;
-		float:left;
-		width:16%;
-		text-align:center;
-		height: 428px;
-		box-sizing:border-box;
-
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:15.750em;
-								width: 10.00em;
-								background-size:cover;
-							}
-						}
-					}
-
-		p{
-			font-family: $body_font;
-			
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $body_background2;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			}
-		}
-
-	}//--end of movie_scifi tag--//
-
-}//--end of scifi tag--//
-
-
-//---------------------------------------------FAMILY SECTION BREAKPOINT 2------------------------------------------//
-
-
-.family{
-	overflow:hidden;
-	.movie_family{
-		margin:0 auto;
-		float:left;
-		width:16%;
-		text-align:center;
-		height: 428px;
-		box-sizing:border-box;
-
-		
-
-					.poster{
-   						position:relative;
-   						margin:0 auto;
-						a{
-							img{
-								height:15.750em;
-								width: 10.00em;
-								background-size:cover;
-							}
-						}
-					}
-
-
-		p{
-			font-family: $body_font;
-			
-		}
-
-		.vote_button{
-			
-			
-			
-
-			p{
-				background-color:$main_theme;
-				display: inline-block;
-				color: $button_text;
-				padding-top:0.7em;
-				padding-bottom:0.7em;
-				padding-left:2em;
-				padding-right: 2em;
-				border:3px solid $button_text;
-
-			}
-			p:hover{
-			border:3px solid $button_border;
-			}
-		}
-	}//--end of movie_family tag--//
-
-}//--end of family tag--//
+}//--end of col-12--//
 
 
 
@@ -952,8 +376,7 @@ footer{
 
 
 
-
-}//-----END OF MEDIA QUIRY TAG BREAKPOINT 2--
+}//-----END OF MEDIA QUIRY TAG BREAKPOINT 2
 
 
 
